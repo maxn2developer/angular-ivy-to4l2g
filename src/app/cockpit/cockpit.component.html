@@ -1,0 +1,21 @@
+<h4  class="text-primary"class="bg-success text-white">Max is created this page.</h4>
+
+<div class="row">
+  <div class="col-xs-12">
+    <p>Add new Servers or blueprints!</p>
+    <label>Server Name</label>
+    <!-- [{ngModel}] = "variable name" to bind with template.-->
+    <input type="text" class="form-control" [(ngModel)] = "newServerName">
+    <label>Server Content</label>
+    <input type="text" class="form-control" [(ngModel)] = "newServerContent">
+    <!-- <p class="" [{ngModel}] = ""></p> -->
+    <br>
+    <button 
+      class="btn btn-primary" 
+      (click)="onAddServer()">Add Server</button>
+    <button
+      class="btn btn-primary"
+      (click)="onAddBlueprint()">Add Server Blueprint</button>
+  </div>
+  <p></p>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+  <!-- serverCreated is bind onServerAdded method which found in the app.component.ts file.
+  onServerAdded method catch data or pass event.
+  -->
+  <!-- blueprintCreated is bind onBlueprintAdded method which found in the app.component.ts file.
+    onBlueprintAdded method catch data or pass event .
+  -->
+  <app-cockpit 
+    (serverCreated)="onServerAdded($event)"
+    (blueprintCreated)="onBlueprintAdded($event)"
+  ></app-cockpit>
+  <hr />
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- an other way of binding  [element]="serverElement"  -->
+      <!-- comment not work on the attribute. -->
+      <app-server-element *ngFor="let serverElement of serverElements"
+      [srvElement]="serverElement">
+      </app-server-element>
+      <!-- parent to child bind,in hello.component.ts -->
+      <hello [name]="name"></hello>
+    </div>
+  </div>
+</div>
